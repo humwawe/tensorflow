@@ -1,4 +1,5 @@
 from photoshop.Network import *
+#from photoshop.dcganNetwork  import *
 from PIL import Image
 import numpy as np
 
@@ -6,7 +7,7 @@ import numpy as np
 def generate():
     g = generator_model()
     g.compile(loss="binary_crossentropy", optimizer=tf.keras.optimizers.Adam(lr=LEARNING_RATE, beta_1=BETA_1))
-    g.load_weights("generator_weight")
+    g.load_weights("./model/my_generator_weight.h5")
     random_data = np.random.uniform(-1, 1, size=(BATCH_SIZE, 100))
     images = g.predict(random_data, verbose=1)
 

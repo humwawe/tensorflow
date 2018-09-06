@@ -1,4 +1,5 @@
 .idea
 src/photoshop/generate
 src/photoshop/images
-src/photoshop/generator_weight
+src/photoshop/model
+src/mnist/fcnn/MODEL

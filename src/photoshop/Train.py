@@ -4,6 +4,8 @@ from matplotlib import pyplot
 
 from photoshop.Network import *
 
+#bug loss vanish
+#from photoshop.dcganNetwork import *
 
 def train():
     data = []
@@ -40,9 +42,10 @@ def train():
             d.trainable = True
 
             print("Epoch {}, 第 {} 步, 生成器的损失: {:.3f}, 判别器的损失: {:.3f}".format(epoch, index, g_loss, d_loss))
+            g.save_weights("./model/my_generator_weight.h5", True)
 
         if epoch % 10 == 9:
-            g.save_weights("my_generator_weight", True)
+            g.save_weights("./model/my_generator_weight.h5", True)
 
 
 if __name__ == "__main__":
