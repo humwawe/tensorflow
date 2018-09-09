@@ -1,5 +1,7 @@
-.idea
-src/photoshop/generate
-src/photoshop/images
-src/photoshop/model
-src/mnist/fcnn/MODEL
+/.idea
+/src/photoshop/generate
+/src/photoshop/images
+/src/photoshop/model
+/src/mnist/fcnn/MODEL
+/src/mnist/cnn/demo2/model
+/src/vgg/vgg16.npy

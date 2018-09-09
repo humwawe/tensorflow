@@ -5,12 +5,11 @@ import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
 if __name__ == '__main__':
-
-    mnist = input_data.read_data_sets("../MNIST_data/", one_hot=True)
+    mnist = input_data.read_data_sets("../../mnist_data/", one_hot=True)
     print("Download Done!")
     # None 表示张量（Tensor）的第一个维度可以是任何长度
-    input_x = tf.placeholder(tf.float32, [None, 28 * 28]) / 255.  # 输入
-    output_y = tf.placeholder(tf.int32, [None, 10])  # 输出：10个数字的标签
+    input_x = tf.placeholder(tf.float32, [None, 28 * 28]) / 255.
+    output_y = tf.placeholder(tf.int32, [None, 10])
     input_x_images = tf.reshape(input_x, [-1, 28, 28, 1])  # 改变形状之后的输入
 
     test_x = mnist.test.images[:3000]
